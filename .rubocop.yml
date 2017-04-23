@@ -24,7 +24,7 @@ Metrics/BlockLength:
     - '**/*_spec.rb'
 
 Rails:
-  Enabled: true
+  Enabled: false
 
 # Prefer &&/|| over and/or.
 Style/AndOr:

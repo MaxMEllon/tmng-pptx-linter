@@ -2,16 +2,15 @@
 
 require 'thor'
 
-module Tmng::Pptx::Linter
-  class CLI < Thor
-    desc 'lint [FILEPATH]', 'checking pptx.'
-    def lint(filepath = '')
-      check_args filepath
-      check_filetype filepath
-      puts filepath
-    end
+class Tmng::Pptx::Linter::CLI < Thor
+  desc 'check [FILEPATH]', 'checking pptx.'
+  def check(filepath = '')
+    check_args filepath
+    check_filetype filepath
+    puts filepath
+  end
 
-    private
+  private
 
     def check_args(args)
       if args.empty?
@@ -26,5 +25,4 @@ module Tmng::Pptx::Linter
         exit 1
       end
     end
-  end
 end
